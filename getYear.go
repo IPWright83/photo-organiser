@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"github.com/rwcarlsen/goexif/exif"
 	"log"
 	"os"
@@ -30,8 +29,8 @@ func getYearFromExif(filePath string) (int, error) {
 		return 0, errors.New("No timestamp avaliable in exif data")
 	}
 
-	lat, long, _ := exifData.LatLong()
-	fmt.Println(lat, long)
+	// lat, long, _ := exifData.LatLong()
+	// fmt.Println(lat, long)
 
 	return time.Year(), nil
 }
